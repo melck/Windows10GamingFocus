@@ -1,15 +1,15 @@
 ##########
 # Master Branch : https://github.com/ChrisTitusTech/win10script
-# Current Author : Daddy Madu 
+# Current Author : Daddy Madu
 # Current Author Source: https://github.com/DaddyMadu/Windows10GamingFocus
 #
 #    Note from author: Never run scripts without reading them & understanding what they do.
 #
-#	Addition: One command to rule them all, One command to find it, and One command to Run it! 
+#	Addition: One command to rule them all, One command to find it, and One command to Run it!
 #
 #     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('http://tweaks.daddymadu.gg')"
 #
-#     Changelogs Moved to ReadMe File for better mangement. 
+#     Changelogs Moved to ReadMe File for better mangement.
 #
 ##########
 $host.ui.RawUI.WindowTitle = "DaddyMadu Ultimate Windows 10 Debloater and Gaming Focus Tweaker"
@@ -25,7 +25,7 @@ $tweaks = @(
 	### Require administrator privileges ###
 	"RequireAdmin",
 	"CreateRestorePoint",
-	
+
 	### Chris Titus Tech Additions
 	"SlowUpdatesTweaks",
 	"Write-ColorOutput", #Utilizing Colors for better Warning messages!
@@ -40,7 +40,7 @@ $tweaks = @(
 	"InstallChocoUpdates",
 	"EnableUlimatePower",    # DaddyMadu don't change order it will break other functions! just disable if you want with #
 	# "ChangeDefaultApps", # Removed due to issues with steam and resetting default apps
-	
+
 	### DaddyMadu Windows Defender Settings! Don't Change Order Just Disable with # If You Don't want it ###
 	"MSIMode",                       #Enable Or Disable MSI Mode For Supported Cards, WARNING ENABLING MSI MODE MIGHT CRUSH YOUR SYSTEM! IF IT HAPPENS PLEASE RESTORE LAST WORKING SYSTEM RESTORE POINT AND DON'T ENABLE MSI MODE ON THIS SYSTEM AGAIN!
 	"DisableNagle",
@@ -89,16 +89,16 @@ $tweaks = @(
 	# "EnableCIMemoryIntegrity",    # "DisableCIMemoryIntegrity",
 	#"DisableScriptHost",            # "EnableScriptHost",
 	#"EnableDotNetStrongCrypto",     # "DisableDotNetStrongCrypto",
-	"DisableMeltdownCompatFlag", # "EnableMeltdownCompatFlag"    
+	"DisableMeltdownCompatFlag", # "EnableMeltdownCompatFlag"
 
 	### Service Tweaks ###
 	"EnableUpdateMSRT",          # "EnableUpdateMSRT",    #"DisableUpdateMSRT",
 	"EnableUpdateDriver",        # "EnableUpdateDriver",  #"DisableUpdateDriver",
 	"DisableUpdateRestart",         # "EnableUpdateRestart",
 	"DisableHomeGroups",          # "EnableHomeGroups",
-	"EnableSharedExperiences",     # "SharedExperiences",
+	"DisableSharedExperiences",     # "SharedExperiences",
 	"DisableRemoteAssistance",      # "EnableRemoteAssistance",
-	"EnableRemoteDesktop",          # "DisableRemoteDesktop",
+	"DisableRemoteDesktop",          # "DisableRemoteDesktop",
 	"DisableAutoplay",              # "EnableAutoplay",
 	"DisableAutorun",               # "EnableAutorun",
 	"DisableStorageSense",        # "EnableStorageSense",
@@ -107,7 +107,7 @@ $tweaks = @(
 	"EnableIndexing",
 	"SetBIOSTimeUTC",         #"SetBIOSTimeUTC", #"SetBIOSTimeLocal",
 	"DisableHibernation",		# "EnableHibernation",
-	"EnableSleepButton",		# "DisableSleepButton",         
+	"EnableSleepButton",		# "DisableSleepButton",
 	"DisableSleepTimeout",        # "EnableSleepTimeout",
 	"DisableFastStartup",         # "EnableFastStartup",
 	"DISGaming",
@@ -130,37 +130,37 @@ $tweaks = @(
 	"DisableRemoteAssistance",
 	"DisableSearchHistroy",
 	"RemoveMeet",
-	
-	
+
+
 	### UI Tweaks ###
-	"EnableActionCenter",          # "DisableActionCenter",
+	"DisableActionCenter",          # "DisableActionCenter",
 	"EnableLockScreen",				# "DisableLockScreen",
 	"EnableLockScreenRS1",			# "DisableLockScreenRS1",
-	# "HideNetworkFromLockScreen",    # "ShowNetworkOnLockScreen",
+	"HideNetworkFromLockScreen",    # "ShowNetworkOnLockScreen",
 	# "HideShutdownFromLockScreen",   # "ShowShutdownOnLockScreen",
 	"DisableStickyKeys",            # "EnableStickyKeys",
 	"ShowTaskManagerDetails"        # "HideTaskManagerDetails",
 	"ShowFileOperationsDetails",    # "HideFileOperationsDetails",
-	"DisableFileDeleteConfirm",	# "EnableFileDeleteConfirm",    
+	"DisableFileDeleteConfirm",	# "EnableFileDeleteConfirm",
 	"HideTaskbarSearch",
 	#"ShowTaskbarSearchIcon",      # "ShowTaskbarSearchBox",
 	"HideTaskView",                 # "ShowTaskView",
-	# "ShowSmallTaskbarIcons",        # "ShowLargeTaskbarIcons",
-	# "SetTaskbarCombineWhenFull",    # "SetTaskbarCombineNever",     # "SetTaskbarCombineAlways",
+	"ShowSmallTaskbarIcons",        # "ShowLargeTaskbarIcons",
+	"SetTaskbarCombineWhenFull",    # "SetTaskbarCombineNever",     # "SetTaskbarCombineAlways",
 	"HideTaskbarPeopleIcon",        # "ShowTaskbarPeopleIcon",
-	#"HideTrayIcons",                #"ShowTrayIcons",
+	"ShowTrayIcons",                #"ShowTrayIcons",
 	"DisableSearchAppInStore",      # "EnableSearchAppInStore",
 	"DisableNewAppPrompt",          # "EnableNewAppPrompt",
-	# "SetControlPanelSmallIcons",  # "SetControlPanelLargeIcons",  # "SetControlPanelCategories",
+	"SetControlPanelSmallIcons",  # "SetControlPanelLargeIcons",  # "SetControlPanelCategories",
 	"SetVisualFXPerformance",     # "SetVisualFXAppearance",
 	# "AddENKeyboard",              # "RemoveENKeyboard",
 	"EnableNumlock",             	# "DisableNumlock",
-	"EnableDarkMode",				# "DisableDarkMode",
+	# "EnableDarkMode",				# "DisableDarkMode",
 	"Stop-EdgePDF",
 
 	### Explorer UI Tweaks ###
 	"ShowKnownExtensions",          # "HideKnownExtensions",
-	"HideHiddenFiles",
+	"ShowHiddenFiles",
 	"HideSyncNotifications"         # "ShowSyncNotifications",
 	"HideRecentShortcuts",          # "ShowRecentShortcuts",
 	"SetExplorerThisPC",            # "SetExplorerQuickAccess",
@@ -172,20 +172,20 @@ $tweaks = @(
 	# "HideDocumentsFromExplorer",  # "ShowDocumentsInExplorer",
 	# "HideDownloadsFromThisPC",      # "ShowDownloadsInThisPC",
 	# "HideDownloadsFromExplorer",  # "ShowDownloadsInExplorer",
-	#"ShowMusicInThisPC",          #"HideMusicFromThisPC",
-	#"ShowMusicInExplorer",       #"HideMusicFromExplorer",
+	"HideMusicFromThisPC",          #"HideMusicFromThisPC",
+	"HideMusicFromExplorer",       #"HideMusicFromExplorer",
 	# "HidePicturesFromThisPC",       # "ShowPicturesInThisPC",
 	# "HidePicturesFromExplorer",   # "ShowPicturesInExplorer",
 	#"ShowVideosInThisPC",         #"HideVideosFromThisPC",
 	#"ShowVideosInExplorer",        #"HideVideosFromExplorer",
 	"Hide3DObjectsFromThisPC",      # "Show3DObjectsInThisPC",
 	"Hide3DObjectsFromExplorer",  # "Show3DObjectsInExplorer",
-	"EnableThumbnails",          # "EnableThumbnails", # "DisableThumbnails",
-	"EnableThumbsDB",              # "EnableThumbsDB", # "DisableThumbsDB", 
+	"DisableThumbnails",          # "EnableThumbnails", # "DisableThumbnails",
+	"DisableThumbsDB",              # "EnableThumbsDB", # "DisableThumbsDB",
 
 	### Application Tweaks ###
 	"DisableAdobeFlash",            # "EnableAdobeFlash",
-	#"UninstallMediaPlayer",         #"InstallMediaPlayer",
+	"UninstallMediaPlayer",         #"InstallMediaPlayer",
 	"UninstallInternetExplorer",  # "InstallInternetExplorer",
 	"UninstallWorkFolders",       # "InstallWorkFolders",
 	"UninstallLinuxSubsystem",      # "UninstallLinuxSubsystem",     #"InstallLinuxSubsystem",
@@ -202,7 +202,7 @@ $tweaks = @(
 
         ### DaddyMadu Quality Of Life Tweaks ###
 	"QOL",
-	
+
         ### DaddyMadu Gaming Tweaks ###
 	"FullscreenOptimizationFIX",
 	"GameOptimizationFIX",
@@ -239,12 +239,12 @@ function Show-Choco-Menu {
         [Parameter(Mandatory)]
         [ValidateNotNullOrEmpty()]
         [string]$Title,
-    
+
         [Parameter(Mandatory)]
         [ValidateNotNullOrEmpty()]
         [string]$ChocoInstall
     )
-   
+
  do
  {
     cls
@@ -297,7 +297,7 @@ function Write-ColorOutput
          [Parameter(Mandatory=$False,Position=2,ValueFromPipeline=$True,ValueFromPipelinebyPropertyName=$True)][ConsoleColor] $ForegroundColor,
          [Parameter(Mandatory=$False,Position=3,ValueFromPipeline=$True,ValueFromPipelinebyPropertyName=$True)][ConsoleColor] $BackgroundColor,
          [Switch]$NoNewline
-    )    
+    )
 
     # Save previous colors
     $previousForegroundColor = $host.UI.RawUI.ForegroundColor
@@ -305,7 +305,7 @@ function Write-ColorOutput
 
     # Set BackgroundColor if available
     if($BackgroundColor -ne $null)
-    { 
+    {
        $host.UI.RawUI.BackgroundColor = $BackgroundColor
     }
 
@@ -378,7 +378,7 @@ Function InstallIrfanview {
 }
 
 Function InstallChocoUpdates {
-        cls
+  cls
 	choco upgrade all -y
 }
 
@@ -409,7 +409,7 @@ Function askXBOX {
     $selection = Read-Host "Please make a selection"
     switch ($selection)
     {
-    'y' { 
+    'y' {
 	$errpref = $ErrorActionPreference #save actual preference
         $ErrorActionPreference = "silentlycontinue"
         Write-Output "Disabling Xbox features..."
@@ -444,7 +444,7 @@ Function askXBOX {
     }
  }
  until ($selection -match "y" -or $selection -match "n" -or $selection -match "q")
-	
+
 }
 
 #Enable Or Disable MSI Mode For Supported Cards, WARNING ENABLING MSI MODE MIGHT CRUSH YOUR SYSTEM! IF IT HAPPENS PLEASE RESTORE LAST WORKING SYSTEM RESTORE POINT AND DON'T ENABLE MSI MODE ON THIS SYSTEM AGAIN!
@@ -463,7 +463,7 @@ $CheckDeviceDes = (Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Enum\$
 } else {
   'No GTX/RTX/AMD Compatible Card Found! Skiping...'
 }
-$ErrorActionPreference = $errpref #restore previous preference	
+$ErrorActionPreference = $errpref #restore previous preference
 }
 
 ##########
@@ -959,7 +959,7 @@ Function EnableNetDevicesAutoInst {
 
 #Ask User If He Want to Enable Or Disable Windows Defender
 Function askDefender {
-	
+
 	do
  {
     cls
@@ -970,7 +970,7 @@ Function askDefender {
     $selection = Read-Host "Please make a selection"
     switch ($selection)
     {
-    'y' { 
+    'y' {
 	Write-Output "Disabling Microsoft Windows Defender and related Processes..."
         If (!(Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\StandardProfile")) {
 		New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\StandardProfile" -Force | Out-Null
@@ -1021,12 +1021,12 @@ Function askDefender {
     }
  }
  until ($selection -match "y" -or $selection -match "n" -or $selection -match "q")
-	
+
 }
 
 #Ask User If He Want to Enable Or Disable Microsoft Software Protection Platform Service
 Function askMSPPS {
-	
+
 	do
  {
     cls
@@ -1038,7 +1038,7 @@ Function askMSPPS {
     $selection = Read-Host "Please make a selection"
     switch ($selection)
     {
-    'y' { 
+    'y' {
 	    Write-Output "Disabling Microsoft Software Protection Platform Service and related Processes..."
 		Disable-ScheduledTask -TaskName "\Microsoft\Windows\SoftwareProtectionPlatform\SvcRestartTask" | Out-Null
 		Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\sppsvc" -Name "Start" -Type DWord -Value 4 -ErrorAction SilentlyContinue
@@ -1054,12 +1054,12 @@ Function askMSPPS {
     }
  }
  until ($selection -match "y" -or $selection -match "n" -or $selection -match "q")
-	
+
 }
 
 #Ask User If He Want to Enable Or Disable Microsoft Store and WSAPPX Service
 Function askMSWSAPPX {
-	
+
 	do
  {
     cls
@@ -1071,7 +1071,7 @@ Function askMSWSAPPX {
     $selection = Read-Host "Please make a selection"
     switch ($selection)
     {
-    'y' { 
+    'y' {
 	    Write-Output "Disabling Microsoft Store and WSAPPX Service..."
 	        $errpref = $ErrorActionPreference #save actual preference
                 $ErrorActionPreference = "silentlycontinue"
@@ -1099,7 +1099,7 @@ Function askMSWSAPPX {
     }
  }
  until ($selection -match "y" -or $selection -match "n" -or $selection -match "q")
-	
+
 }
 
 # Enable F8 boot menu options
@@ -1135,7 +1135,7 @@ Function EnableCIMemoryIntegrity {
 	Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" -Name "Enabled" -Type DWord -Value 1
 }
 
-# Disable Core Isolation Memory Integrity - 
+# Disable Core Isolation Memory Integrity -
 Function DisableCIMemoryIntegrity {
 	Write-Output "Disabling Core Isolation Memory Integrity..."
 	Remove-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" -Name "Enabled" -ErrorAction SilentlyContinue
@@ -2388,9 +2388,9 @@ Function EnableThumbsDB {
 ##########
 # Application Tweaks
 ##########
-# Option To Uninstall Or install OneDrive 
+# Option To Uninstall Or install OneDrive
 Function DorEOneDrive {
-	
+
 	do
  {
     cls
@@ -2401,7 +2401,7 @@ Function DorEOneDrive {
     $selection = Read-Host "Please make a selection"
     switch ($selection)
     {
-    'y' { 
+    'y' {
 	Write-Output "Disabling Microsoft OneDrive and related Processes..."
         # Disable OneDrive
 	$errpref = $ErrorActionPreference #save actual preference
@@ -2444,7 +2444,7 @@ Function DorEOneDrive {
 	$errpref = $ErrorActionPreference #save actual preference
         $ErrorActionPreference = "silentlycontinue"
 	Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\OneDrive" -Name "DisableFileSyncNGSC" -ErrorAction SilentlyContinue
-	
+
     # Install OneDrive - Not applicable to Server
 	$onedrive = "$env:SYSTEMROOT\SysWOW64\OneDriveSetup.exe"
 	If (!(Test-Path $onedrive)) {
@@ -2458,7 +2458,7 @@ Function DorEOneDrive {
     }
  }
  until ($selection -match "y" -or $selection -match "n" -or $selection -match "q")
-	
+
 }
 
 # Disable built-in Adobe Flash in IE and Edge
@@ -2736,7 +2736,7 @@ Function QOL {
 	New-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" -ErrorAction SilentlyContinue | Out-Null
 	Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" -Name "ScoobeSystemSettingEnabled" -Type DWord -Value 0 | Out-Null -ErrorAction SilentlyContinue #disable annoying Get even more out of Windows
 	Set-ItemProperty -Path "HKCU:\Control Panel\Accessibility" -Name "DynamicScrollbars" -Type DWord -Value 0 #disable Hide Scroll bars
-	Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "SmoothScroll" -Type DWord -Value 0 #disable smooth scrolling 
+	Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "SmoothScroll" -Type DWord -Value 0 #disable smooth scrolling
 	If ([System.Environment]::OSVersion.Version.Build -ge 22000) {
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Name "NoInstrumentation" -Type DWord -Value 1 #disable microsoft usertracking
 	} Else {
@@ -2788,18 +2788,18 @@ Function RawMouseInput {
 #Detecting Windows Scale Layout Automatically and applying mouse fix according to it!
 Function DetectnApplyMouseFIX {
 Add-Type @'
-  using System; 
+  using System;
   using System.Runtime.InteropServices;
   using System.Drawing;
 
-  public class DPI {  
+  public class DPI {
     [DllImport("gdi32.dll")]
     static extern int GetDeviceCaps(IntPtr hdc, int nIndex);
 
     public enum DeviceCap {
       VERTRES = 10,
       DESKTOPVERTRES = 117
-    } 
+    }
 
     public static float scaling() {
       Graphics g = Graphics.FromHwnd(IntPtr.Zero);
@@ -3071,9 +3071,9 @@ Function NvidiaTweaks {
        Pop-Location
        } else {
        Write-Output "Nvidia GTX/RTX Card Not Detected! Skipping..."
-       } 
+       }
        $errpref = $ErrorActionPreference #save actual preference
-       $ErrorActionPreference = "silentlycontinue"	   
+       $ErrorActionPreference = "silentlycontinue"
        $CheckGPURegistryKey0 = (Get-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000").DriverDesc
 	   $CheckGPURegistryKey1 = (Get-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001").DriverDesc
 	   $CheckGPURegistryKey2 = (Get-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0002").DriverDesc
@@ -3373,7 +3373,7 @@ Function FixURLext {
     Pop-Location
     choco uninstall -y setuserfta | Out-Null
 }
-    
+
 #DaddyMadu Ultimate CLeaner
 Function UltimateCleaner {
     Write-Host "Running DaddyMadu Ultimate Cleaner => Temp folders & Flush DNS + Reset IP...."
@@ -3465,38 +3465,38 @@ Function DisableDarkMode {
 ##########
 
 Function Stop-EdgePDF {
-    
-    #Stops edge from taking over as the default .PDF viewer    
+
+    #Stops edge from taking over as the default .PDF viewer
     Write-Output "Stopping Edge from taking over as the default .PDF viewer"
-# Identify the edge application class 
-$Packages = "HKCU:SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\Repository\Packages" 
-$edge = Get-ChildItem $Packages -Recurse -include "MicrosoftEdge" 
- 
-# Specify the paths to the file and URL associations 
-$FileAssocKey = Join-Path $edge.PSPath Capabilities\FileAssociations 
-$URLAssocKey = Join-Path $edge.PSPath Capabilities\URLAssociations 
- 
-# get the software classes for the file and URL types that Edge will associate 
-$FileTypes = Get-Item $FileAssocKey 
-$URLTypes = Get-Item $URLAssocKey 
- 
-$FileAssoc = Get-ItemProperty $FileAssocKey 
-$URLAssoc = Get-ItemProperty $URLAssocKey 
- 
-$Associations = @() 
-$Filetypes.Property | foreach {$Associations += $FileAssoc.$_} 
-$URLTypes.Property | foreach {$Associations += $URLAssoc.$_} 
- 
-# add registry values in each software class to stop edge from associating as the default 
-foreach ($Association in $Associations) 
-     { 
-     $Class = Join-Path HKCU:SOFTWARE\Classes $Association 
-     #if (Test-Path $class) 
-     #   {write-host $Association} 
-     # Get-Item $Class 
-     Set-ItemProperty $Class -Name NoOpenWith -Value "" 
-     Set-ItemProperty $Class -Name NoStaticDefaultVerb -Value "" 
-     } 
+# Identify the edge application class
+$Packages = "HKCU:SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\Repository\Packages"
+$edge = Get-ChildItem $Packages -Recurse -include "MicrosoftEdge"
+
+# Specify the paths to the file and URL associations
+$FileAssocKey = Join-Path $edge.PSPath Capabilities\FileAssociations
+$URLAssocKey = Join-Path $edge.PSPath Capabilities\URLAssociations
+
+# get the software classes for the file and URL types that Edge will associate
+$FileTypes = Get-Item $FileAssocKey
+$URLTypes = Get-Item $URLAssocKey
+
+$FileAssoc = Get-ItemProperty $FileAssocKey
+$URLAssoc = Get-ItemProperty $URLAssocKey
+
+$Associations = @()
+$Filetypes.Property | foreach {$Associations += $FileAssoc.$_}
+$URLTypes.Property | foreach {$Associations += $URLAssoc.$_}
+
+# add registry values in each software class to stop edge from associating as the default
+foreach ($Association in $Associations)
+     {
+     $Class = Join-Path HKCU:SOFTWARE\Classes $Association
+     #if (Test-Path $class)
+     #   {write-host $Association}
+     # Get-Item $Class
+     Set-ItemProperty $Class -Name NoOpenWith -Value ""
+     Set-ItemProperty $Class -Name NoStaticDefaultVerb -Value ""
+     }
 }
 
 #Create Restore Point
@@ -3517,7 +3517,7 @@ Function CreateRestorePoint {
 
 Function DebloatAll {
 cls
-    $Bloatware = @(
+  $Bloatware = @(
     #Unnecessary Windows 10 AppX Apps
     "*3DBuilder*"
     "*AppConnector*"
@@ -3558,49 +3558,53 @@ cls
     "*Advertising.Xaml*"
     "*SolitaireCollection*"
     "*YourPhone*"
-		
-        #Sponsored Windows 10 AppX Apps
-        #Add sponsored/featured apps to remove in the "*AppName*" format
-		
-        "*EclipseManager*"
-        "*ActiproSoftwareLLC*"
-        "*AdobePhotoshopExpress*"
-        "*Duolingo-LearnLanguagesforFree*"
-        "*PandoraMediaInc*"
-        "*CandyCrush*"
-        "*BubbleWitch3Saga*"
-        "*Wunderlist*"
-        "*Flipboard*"
-        "*Twitter*"
-        "*Facebook*"
-        "*Royal Revolt*"
-        "*Sway*"
-        "*Speed Test*"
-        "*Viber*"
-        "*ACGMediaPlayer*"
-        "*Netflix*"
-        "*OneCalendar*"
-        "*LinkedInforWindows*"
-        "*HiddenCityMysteryofShadows*"
-        "*Hulu*"
-        "*HiddenCity*"
-        "*AdobePhotoshopExpress*"
-	"*RoyalRevolt2*"
-	"*AutodeskSketchBook*"
-	"*DisneyMagicKingdoms*"
-	"*MarchofEmpires*"
-	"*Plex*"
-	"*FarmVille2CountryEscape*"
-	"*CyberLinkMediaSuiteEssentials*"
-	"*DrawboardPDF*"
-	"*Asphalt8Airborne*"
-	"*Keeper*"
-	"*SpotifyMusic*"
-	"*WinZipUniversal*"
-	"*XING*"           
-        "*Advertising.Xaml*"
-        "*Advertising.Xaml*"
-    	"*Roblox*"
+
+    #Sponsored Windows 10 AppX Apps
+    #Add sponsored/featured apps to remove in the "*AppName*" format
+
+    "*EclipseManager*"
+    "*ActiproSoftwareLLC*"
+    "*AdobePhotoshopExpress*"
+    "*Duolingo-LearnLanguagesforFree*"
+    "*PandoraMediaInc*"
+    "*CandyCrush*"
+    "*BubbleWitch3Saga*"
+    "*Wunderlist*"
+    "*Flipboard*"
+    "*Twitter*"
+    "*Facebook*"
+    "*Royal Revolt*"
+    "*Sway*"
+    "*Speed Test*"
+    "*Viber*"
+    "*ACGMediaPlayer*"
+    "*Netflix*"
+    "*OneCalendar*"
+    "*LinkedInforWindows*"
+    "*HiddenCityMysteryofShadows*"
+    "*Hulu*"
+    "*HiddenCity*"
+    "*AdobePhotoshopExpress*"
+    "*RoyalRevolt2*"
+    "*AutodeskSketchBook*"
+    "*DisneyMagicKingdoms*"
+    "*MarchofEmpires*"
+    "*Plex*"
+    "*FarmVille2CountryEscape*"
+    "*CyberLinkMediaSuiteEssentials*"
+    "*DrawboardPDF*"
+    "*Asphalt8Airborne*"
+    "*Keeper*"
+    "*SpotifyMusic*"
+    "*WindowsCamera*"
+    "*ZuneVideo*"
+    "*ZuneMusic*"
+    "*SpotifyMusic*"
+    "*WinZipUniversal*"
+    "*XING*"
+    "*Advertising.Xaml*"
+    "*Advertising.Xaml*"
+    "*Roblox*"
     )
     foreach ($Bloat in $Bloatware) {
 	$errpref = $ErrorActionPreference #save actual preference
